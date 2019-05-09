@@ -51,6 +51,13 @@ p,h3 {
   td {
     text-align: center;
   }
+
+  /* for eventselector */
+  .pic-bdr {
+    border-top: 2px solid whitesmoke;
+  }
+
+
 /* CSS for Admin */
 /* .active {
   background-color: chartreuse;
@@ -95,7 +102,10 @@ td {
 .chk {
   padding-left:22px !important;
   
-  
+}
+
+.carousel {
+  height: 350px;
 }
 
 }
