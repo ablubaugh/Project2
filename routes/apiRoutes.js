@@ -1,7 +1,11 @@
 /* eslint-disable prettier/prettier */
 const db = require("../models");
 const sec = require("../auth");
-
+// SMS config
+const accountSid = process.env.ACCOUNTSID;
+const authToken = process.env.AUTHTOKEN;
+const client = require("twilio")(accountSid, authToken);
+// End SMS config
 module.exports = app => {
 
   app.post("/api/login", (req, res) => {
@@ -60,6 +64,14 @@ module.exports = app => {
                 maxAge: 3600000
               })
               .send("Success");
+            // Send SMS
+            client.messages
+              .create({
+                body: "Thanks for the registration. Please reply y to verify your number. Murderboat.",
+                from: "9712564994",
+                to: newUserRequest.phone
+              })
+              .then(message => console.log(message.sid));
           })
           .catch(error => {
             console.log(`error from line 66 apiRoutes: ${error}`);
@@ -73,8 +85,8 @@ module.exports = app => {
 
   app.put("/api/shift/:id", (req, res) => {
     const user = sec.authorize.verifyToken(req.cookies);
-    console.log(user);
     if (user) {
+      userEmail = user.email;
       db.User_Shift.update({
         UserId: user.id
       },
@@ -98,6 +110,7 @@ module.exports = app => {
           res.json(results);
         }
       );
+      
     } else {
       res.status(401).end();
     }
