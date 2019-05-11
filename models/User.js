@@ -38,7 +38,7 @@ module.exports = (sequelize, DataTypes) => {
       defaultValue: false,
       allowNull: false
     },
-    isBanned: {
+    verifiedNumber: {
       type: DataTypes.BOOLEAN,
       defaultValue: false,
       allowNull: false

@@ -14,7 +14,7 @@ CREATE TABLE `Users` (
 	`email` VARCHAR(100) NOT NULL,
     `skills` VARCHAR(5000),
     `password` CHAR(60) NOT NULL,
-    `banned` BOOLEAN NOT NULL default 0,
+    `verifiedNumber` BOOLEAN NOT NULL default 0,
 
 	/* Set ID as primary key */
 	PRIMARY KEY (`id`)

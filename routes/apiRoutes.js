@@ -94,11 +94,14 @@ module.exports = app => {
         where: {
           id: req.params.id
         }
+      }).then(response => {
+        res.json(response);
       });
     } else {
       res.status(401).end();
     }
   });
+<<<<<<< HEAD
 
   app.put("/api/admin/:checktype", (req, res) => {
     const user = sec.authorize.verifyToken(req.cookies);
@@ -116,3 +119,6 @@ module.exports = app => {
     }
   });
 };
+=======
+};
+>>>>>>> 3f0cfd5249d79d1aa51f63b1b4432088b4818025

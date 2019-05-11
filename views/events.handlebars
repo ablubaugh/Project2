@@ -4,10 +4,11 @@
       <img src="images/murderboat_logo.png" class="responsive-img" id="main-logo">
     </div>
     <div class="col s12 m8 pull-m4">
-       <p class="mbvcs">Manifest VCS Register</p><br>
-       <p class="flow-text-sm mobileghost">Volunteer Coordination System - Please login or register to volunteer with us! 
-      <br>If you have any additional questions, please contact us at <a href="volunteers@murderboat.com">volunteers@murderboat.com!</a>
-      <br>Read volunteer policy at: <a href="www.murderboat.com/volunteers">www.murderboat.com/volunteers</a></p>
+      <p class="mbvcs">Manifest VCS Register</p><br>
+      <p class="flow-text-sm mobileghost">Volunteer Coordination System - Please login or register to volunteer with us!
+        <br>If you have any additional questions, please contact us at <a
+          href="volunteers@murderboat.com">volunteers@murderboat.com!</a>
+        <br>Read volunteer policy at: <a href="www.murderboat.com/volunteers">www.murderboat.com/volunteers</a></p>
 
 
     </div>
@@ -26,16 +27,26 @@
         <tbody id="tbodyEvents">
           {{#each events}}
           <tr>
-          <td>{{name}}</td>
-          <td>{{startTime}}</td>
-          <td>{{endTime}}</td>
-          <td class="right-align">
-          <a href="/shifts?id={{id}}" class="waves-effect waves-light btn">Select</a>
-          </td>                 
-        </tr>
-          {{/each}}       
+            <td>{{name}}</td>
+            <td>{{startTime}}</td>
+            <td>{{endTime}}</td>
+            <td class="right-align">
+              <a href="/shifts?id={{id}}" class="waves-effect waves-light btn">Select</a>
+            </td>
+          </tr>
+          {{/each}}
+          {{#if user.isStaff}}
+          <tr>
+            <td>
+            </td>
+            <td></td>
+            <td></td>
+            <td class="right-align"> <a href="/createEvent" class="btn-floating btn-large waves-effect waves-light red"><i
+                  class="material-icons">add</i></a></td>
+          </tr>
+          {{/if}}
         </tbody>
       </table>
     </div>
-  </div>  
+  </div>
 </div>

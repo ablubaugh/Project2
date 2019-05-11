@@ -1,0 +1,70 @@
+<div class="section black white-text">
+  <div class="row container">
+    <div class="col s12 m4 push-m8 center-align">
+      <img src="images/murderboat_logo.png" class="responsive-img" id="main-logo">
+    </div>
+    <div class="col s12 m8 pull-m4">
+       <p class="mbvcs">Manifest VCS Register</p><br>
+       <p class="flow-text-sm mobileghost">Volunteer Coordination System - Please login or register to volunteer with us! 
+      <br>If you have any additional questions, please contact us at <a href="volunteers@murderboat.com">volunteers@murderboat.com!</a>
+      <br>Read volunteer policy at: <a href="www.murderboat.com/volunteers">www.murderboat.com/volunteers</a></p>
+
+
+    </div>
+  </div>
+
+  <div class="row container">
+    <form method="POST" role="form" class="col s12">
+        <div class="row">
+            <div class="input-field-sm col s12">
+              <input id="name" type="text" class="validate white-text" name="name">
+              <label for="name">Name of Event</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field-sm col s12 white-text">
+              <input id="description" type="text" class="validate white-text" name="description" >
+              <label for="lastName">Description</label>
+            </div>
+          </div>
+        <div class="row">
+            <div class="input-field-sm col s12 white-text">
+              <input id="venue" type="text" class="validate white-text" name="venue" >
+              <label for="venue">Venue</label>
+            </div>
+        </div> 
+        <div class="row">
+                <div class="input-field-sm col s12">
+                  <input id="startDate" type="text" class="datepicker white-text" name="startDate" >
+                  <label for="startDate">Start Date</label>
+                </div>
+            </div> 
+        <div class="row">
+            <div class="input-field-sm col s12 white-text">
+              <input id="startTime" type="text" class="timepicker white-text" name="startTime" >
+              <label for="startTime">Start Time</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field-sm col s12">
+              <input id="endDate" type="text" class="datepicker white-text" name="endDate" >
+              <label for="endDate">End Date</label>
+            </div>
+        </div>
+        <div class="row">
+                <div class="input-field-sm col s12 white-text">
+                  <input id="endTime" type="text" class="timepicker white-text" name="endTime" >
+                  <label for="endTime">End Time</label>
+                </div>
+            </div>
+    
+    </form>
+
+    <div class="col s12">
+      <button id="createEvent" class="btn waves-effect waves-light" type="submit" name="action">Submit
+        <i class="material-icons right">send</i>
+      </button>
+    </div>
+  </div>
+
+  <script src="/js/event_create.js"></script>

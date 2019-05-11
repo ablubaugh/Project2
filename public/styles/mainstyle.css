@@ -51,6 +51,12 @@ p,h3 {
   td {
     text-align: center;
   }
+
+  .datepicker-table-wrapper  {
+      background-color: #999;
+
+
+  }
 /* CSS for Admin */
 /* .active {
   background-color: chartreuse;
