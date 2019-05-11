@@ -21,6 +21,7 @@
     "moment": "^2.24.0",
     "mysql2": "^1.6.4",
     "nodemailer": "^6.1.1",
+    "nodemailer-ntlm-auth": "^1.0.1",
     "sequelize": "^4.41.2",
     "twilio": "^3.30.3"
   },
